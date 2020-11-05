@@ -1,0 +1,9 @@
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<mix = 'http://www.jcp.org/jcr/mix/1.0'>
+
+[jnt:dynamic_prop] > jnt:content, jmix:editorialContent, jmix:structuredContent, mix:title
+ - * (string)
+
+[jnt:dynamicPropSettings] > jnt:content, jmix:siteComponent, jmix:studioOnly, mix:title
+

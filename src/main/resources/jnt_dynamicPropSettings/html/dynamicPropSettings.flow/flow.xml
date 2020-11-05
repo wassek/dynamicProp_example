@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow
+                          http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+    <var name="dynamicPropHandler" class="org.jahia.modules.dynamicprop.flow.DynamicPropFlowHandler"/>
+
+    <view-state id="view" >
+        <on-entry>
+            <evaluate expression="dynamicPropHandler.loadAndSave(requestParameters)" result="flowScope.dynamicProp"/>
+        </on-entry>
+        <transition on="saveSettings" to="view"/>
+    </view-state>
+</flow>
